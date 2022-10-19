@@ -42,7 +42,7 @@ int addExpressions(int firstCount, int secondCount)
     i = 0;
     j = 0;
     k = 0;
-    while(i < firstCount && j < secondCount)
+    while(i < firstCount || j < secondCount)
     {
         if(first[i].exp == second[j].exp)
         {
@@ -68,21 +68,7 @@ int addExpressions(int firstCount, int secondCount)
         }
     }
 
-    while(i < firstCount)
-    {
-        result[k].coeff = first[i].coeff;
-        result[k].exp = first[i].exp;
-        k++;
-        i++;
-    }
-
-    while(j < secondCount)
-    {
-        result[k].coeff = second[j].coeff;
-        result[k].exp = second[j].exp;
-        k++;
-        j++;
-    }
+   
     return k;
 }
 int main()
