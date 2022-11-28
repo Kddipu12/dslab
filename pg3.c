@@ -15,20 +15,18 @@ int isEmpty(){
 }
  
 int topelement(){
-     if(isEmpty())
+     int t=isEmpty();
+    if(t==1)
     {
         printf("Stack Underflow");
         exit(1);
-    }printf(top->data);
+    }
+    printf("%d",top->data);
 }
 void push(int data){
     struct node * newNode;
     newNode = malloc(sizeof(newNode));
-    if (newNode == NULL)
-    {
-        printf("Stack overflow");
-        exit(1);
-    }
+    
     newNode->data= data;
     newNode->link=NULL;
     newNode->link =top;
@@ -62,8 +60,8 @@ void display(){
         exit(1);
     }
     printf("Stack elemets are ");
-    while (temp){
-        printf("%d",temp->data);
+    while (temp!=NULL){
+        printf("%d\t",temp->data);
         temp =temp->link;
     }
     printf("\n");
@@ -79,9 +77,8 @@ void main()
     printf("\n 1 - Push");
     printf("\n 2 - Pop");
     printf("\n 3 - Top");
-    printf("\n 4 - Empty");
+    printf("\n 4 - Dipslay");
     printf("\n 5 - Exit");
-    printf("\n 6 - Dipslay");
     
     
     
@@ -102,21 +99,15 @@ void main()
             pop();
             break;
         case 3:
-            
-            
             topelement();
                 
             break;
         case 4:
-            isEmpty();
-            break;
-        case 5:
-            exit(0);
-        case 6:
-            display();
+             display();
             break;
        
-        
+        case 5:
+            exit(0);
         
         default :
             printf(" Wrong choice, Please enter correct choice  ");
@@ -124,7 +115,4 @@ void main()
         }
     }
 }
- 
-
-
 
