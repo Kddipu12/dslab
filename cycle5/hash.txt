@@ -1,0 +1,23 @@
+Hashtable is an array of size = TABLE_SIZE
+Step 1: Read the value to be inserted, key
+Step 2:  let i = 0
+Step 3: hkey = key% TABLE_SIZE
+Step 4 :compute the index at which the key has to be inserted in hash table
+                index = (hkey + i) % TABLE_SIZE
+Step 5: if there is no element at that index then  insert the value at index and STOP
+Step 6: If there is already an element at that index
+                step 4.1: i = i+1
+step 7:  if i < TABLE_SIZE then go to step 4
+Algorithm to search a value in linear probing
+
+Hashtable is an array of size = TABLE_SIZE
+Step 1: Read the value to be searched, key
+Step 2:  let i = 0
+Step 3: hkey = key% TABLE_SIZE
+Step 4: compute the index at which the key can be found
+               index = (hkey+ i) % TABLE_SIZE
+Step 5: if the  element at that index is same as the search value then print element found and  STOP
+Step 6: else
+                step 4.1: i = i+1
+step 7:  if i < TABLE_SIZE then go to step 4
+ 
